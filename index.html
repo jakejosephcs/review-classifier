@@ -14,35 +14,34 @@
   <p>Classify New Reviews</p>
   <div class="example-reviews">
     <p>Please provide at least 5 examples, the more the better:</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <input type="radio" name="label" id="good" value="good">
+    <textarea name="example-review" id="example-review" cols="30" rows="10"></textarea>
+    <input type="radio" name="label" id="good" value="Good">
     <label for="label">Good</label>
-    <input type="radio" name="label" id="neutral" value="neutral">
+    <input type="radio" name="label" id="neutral" value="Neutral">
     <label for="label">Neutral</label>
-    <input type="radio" name="label" id="poor" value="poor">
+    <input type="radio" name="label" id="poor" value="Poor">
     <label for="label">Poor</label>
-    <button>ADD</button>
-    <div class="reviews">
+    <button type="button" id="add-example-review">add</button>
+    <div class="reviews" id="example-reviews">
       <div class="review">
         <p>The service was super quick. I love that</p>
         <span>good</span>
-        <i class="fas fa-edit"></i>
-        <i class="fas fa-trash"></i>
+        <i class="fas fa-edit example-edit" id="1-edit"></i>
+        <i class="fas fa-trash example-trash" id="1-trash"></i>
       </div>
     </div>
   </div>
   <div class="new-reviews">
     <p>Enter a new review to have it automatically labelled:</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button>ADD</button>
-    <div class="reviews">
+    <textarea name="review-to-classify" id="review-to-classify" cols="30" rows="10"></textarea>
+    <button type="button" id="classify-review-btn">classify</button>
+    <div class="reviews" id="classified-reviews">
       <div class="review">
         <p>Food quality was better than last time</p>
         <span>neutral</span>
-        <i class="fas fa-trash"></i>
       </div>
     </div>
   </div>
-  <!-- <script src="./script.js"></script> -->
+  <script src="./script.js"></script>
 </body>
 </html>
