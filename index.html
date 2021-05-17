@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4ccdfffd76.js" crossorigin="anonymous"></script>
+  <title>Review Classifier</title>
+</head>
+<body>
+  <h1>Review Classifier</h1>
+  <h2>Classify any review by providing only a few labelled examples</h2>
+  <p>Provide Example Reviews</p>
+  <p>Classify New Reviews</p>
+  <div class="example-reviews">
+    <p>Please provide at least 5 examples, the more the better:</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="radio" name="label" id="good" value="good">
+    <label for="label">Good</label>
+    <input type="radio" name="label" id="neutral" value="neutral">
+    <label for="label">Neutral</label>
+    <input type="radio" name="label" id="poor" value="poor">
+    <label for="label">Poor</label>
+    <button>ADD</button>
+    <div class="reviews">
+      <div class="review">
+        <p>The service was super quick. I love that</p>
+        <span>good</span>
+        <i class="fas fa-edit"></i>
+        <i class="fas fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <div class="new-reviews">
+    <p>Enter a new review to have it automatically labelled:</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>ADD</button>
+    <div class="reviews">
+      <div class="review">
+        <p>Food quality was better than last time</p>
+        <span>neutral</span>
+        <i class="fas fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="./script.js"></script> -->
+</body>
+</html>
