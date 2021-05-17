@@ -8,6 +8,18 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #264653;
   background-color: #e5e5e5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'title title'
+    'subtitle subtitle'
+    'example new'
+    'example-reviews example-reviews'
+    'new-reviews new-reviews';
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+  gap: 1em;
 }
 
 /* Typography */
@@ -22,4 +34,34 @@ h2 {
 p,
 label {
   font-size: 0.75rem;
+}
+
+/* Main */
+h1 {
+  grid-area: title;
+  text-align: center;
+}
+
+h2 {
+  grid-area: subtitle;
+  text-align: center;
+}
+
+.example-label {
+  grid-area: example;
+  justify-self: right;
+}
+
+.new-label {
+  grid-area: new;
+}
+
+.example-reviews {
+  grid-area: example-reviews;
+  justify-self: center;
+}
+
+.new-reviews {
+  grid-area: new-reviews;
+  justify-self: center;
 }
