@@ -119,3 +119,67 @@ h2 {
   transition: 0.25s;
 }
 
+/* Example Reviews */
+
+.example-reviews-container {
+  grid-area: example-reviews-container;
+  grid-template-areas:
+    'description description description description'
+    'txtarea txtarea txtarea txtarea'
+    'good neutral poor add'
+    'reviews reviews reviews reviews';
+}
+
+.label-container {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.label-container label {
+  font-weight: bold;
+}
+
+.example-reviews-container .good-container {
+  grid-area: good;
+}
+
+.good-container label {
+  color: #27a744;
+}
+
+.example-reviews-container .neutral-container {
+  grid-area: neutral;
+}
+
+.neutral-container label {
+  color: #6d747d;
+}
+
+.example-reviews-container .poor-container {
+  grid-area: poor;
+}
+
+.poor-container label {
+  color: #dc3645;
+}
+
+.good-container input:hover,
+.neutral-container input:hover,
+.poor-container input:hover {
+  cursor: pointer;
+}
+
+.example-reviews-container label {
+  margin-left: 0.25em;
+}
+
+.example-reviews-container button {
+  grid-area: add;
+}
+
+.example-reviews-container .reviews {
+  grid-area: reviews;
+}
+
