@@ -7,42 +7,43 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script src="https://kit.fontawesome.com/4ccdfffd76.js" crossorigin="anonymous"></script>
   <title>Review Classifier</title>
 </head>
 <body>
   <h1>Review Classifier</h1>
   <h2>Classify any review by providing only a few labelled examples</h2>
-  <p class="example-label">Provide Example Reviews</p>
-  <p class="new-label">Classify New Reviews</p>
-  <div class="example-reviews">
+  <div class="section-container">
+    <p class="section section-active" id="section-example">Provide Example Reviews</p>
+    <p class="section section-new-reviews" id="section-new">Classify New Reviews</p>
+  </div>
+  <div class="reviews-container example-reviews-container" id="example-reviews-container">
     <p>Please provide at least 5 examples, the more the better:</p>
-    <textarea name="example-review" id="example-review" cols="30" rows="10"></textarea>
-    <input type="radio" name="label" id="good" value="Good">
-    <label for="label">Good</label>
-    <input type="radio" name="label" id="neutral" value="Neutral">
-    <label for="label">Neutral</label>
-    <input type="radio" name="label" id="poor" value="Poor">
-    <label for="label">Poor</label>
-    <button type="button" id="add-example-review">add</button>
+    <textarea name="example-review" id="example-review" cols="10" rows="10"></textarea>
+    <div class="label-container good-container">
+      <input type="radio" name="label" id="good" value="Good">
+      <label for="label">Good</label>
+    </div>
+    <div class="label-container neutral-container">
+      <input type="radio" name="label" id="neutral" value="Neutral">
+      <label for="label">Neutral</label>
+    </div>
+    <div class="label-container poor-container">
+      <input type="radio" name="label" id="poor" value="Poor">
+      <label for="label">Poor</label>
+    </div>
+    <button type="button"  class="btn" id="add-example-review">add</button>
     <div class="reviews" id="example-reviews">
-      <div class="review">
-        <p>The service was super quick. I love that</p>
-        <span>good</span>
-        <i class="fas fa-edit example-edit" id="1-edit"></i>
-        <i class="fas fa-trash example-trash" id="1-trash"></i>
-      </div>
+      <h5>Examples: </h5>
     </div>
   </div>
-  <div class="new-reviews">
+  <div class="reviews-container new-reviews-container hide" id="new-reviews-container">
     <p>Enter a new review to have it automatically labelled:</p>
-    <textarea name="review-to-classify" id="review-to-classify" cols="30" rows="10"></textarea>
-    <button type="button" id="classify-review-btn">classify</button>
+    <textarea name="review-to-classify" id="review-to-classify" cols="10" rows="10"></textarea>
+    <button type="button" id="classify-review-btn" class="btn">classify</button>
     <div class="reviews" id="classified-reviews">
-      <div class="review">
-        <p>Food quality was better than last time</p>
-        <span>neutral</span>
-      </div>
+      <h5>New Reviews: </h5>
     </div>
   </div>
   <script src="./script.js"></script>
