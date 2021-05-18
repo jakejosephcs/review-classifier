@@ -183,3 +183,22 @@ h2 {
   grid-area: reviews;
 }
 
+/* New Reviews */
+.new-reviews-container {
+  grid-area: new-reviews;
+  grid-template-areas:
+    'description description description description'
+    'txtarea txtarea txtarea txtarea'
+    '. . . addBtn'
+    'reviews reviews reviews reviews';
+}
+
+.new-reviews-container button {
+  grid-area: addBtn;
+}
+
+.new-reviews-container .reviews {
+  grid-area: reviews;
+}
+
+
