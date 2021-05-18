@@ -7,19 +7,25 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #264653;
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     'title title'
     'subtitle subtitle'
-    'example new'
-    'example-reviews example-reviews'
+    'section-container section-container'
+    'example-reviews-container example-reviews-container'
     'new-reviews new-reviews';
   justify-content: center;
   align-content: center;
   padding: 2em;
-  gap: 1em;
+  margin-top: 2em;
+  width: 100%;
+}
+
+textarea {
+  max-width: 300px;
+  height: 50px;
 }
 
 /* Typography */
@@ -40,28 +46,40 @@ label {
 h1 {
   grid-area: title;
   text-align: center;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   grid-area: subtitle;
   text-align: center;
-}
-
-.example-label {
-  grid-area: example;
-  justify-self: right;
-}
-
-.new-label {
-  grid-area: new;
-}
-
-.example-reviews {
-  grid-area: example-reviews;
   justify-self: center;
+  font-weight: 500;
+  margin-bottom: 1.5em;
+  max-width: 300px;
 }
 
-.new-reviews {
-  grid-area: new-reviews;
+.section-container {
+  grid-area: section-container;
   justify-self: center;
+  display: flex;
+}
+
+.section {
+  margin-bottom: 0.75em;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  opacity: 0.35;
+}
+
+.section-new-reviews {
+  margin-left: 0.75em;
+}
+
+.section:hover {
+  cursor: pointer;
+}
+
+.section-active {
+  border-bottom: 1px solid black;
+  opacity: 1;
 }
