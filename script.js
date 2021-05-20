@@ -80,3 +80,27 @@ function delBtn(id) {
   examples.splice(id, 1);
   renderExampleReviews();
 }
+
+// CODE CLASSIFIED REVIEWS
+let classifyReviewBtn = document.getElementById('classify-review-btn');
+let reviewToClassify = document.getElementById('review-to-classify');
+let classifiedReviewsDiv = document.getElementById('classified-reviews');
+
+// Add classified review to params and make the post request to the API
+classifyReviewBtn.addEventListener('click', () => {
+  params.query = reviewToClassify.value;
+  postData().then(result => {
+    addClassifiedReviews(params.query, result.label);
+  });
+});
+
+// Adds the review and its fetched label to the screen
+function addClassifiedReviews(review, label) {
+  classifiedReviewsDiv.innerHTML += `
+    <div class="review">
+      <p>${review}</p>
+      <span class="review-options-label ${label.toLowerCase()}">${label}</span>
+    </div>
+  `;
+  reviewToClassify.value = '';
+}
