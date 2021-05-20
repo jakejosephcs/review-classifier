@@ -4,7 +4,8 @@ async function postData() {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer REDACTED',
+      Authorization:
+        'Bearer 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',
     },
     body: JSON.stringify(params),
   });
@@ -104,3 +105,25 @@ function addClassifiedReviews(review, label) {
   `;
   reviewToClassify.value = '';
 }
+
+// SWITCH TEXTAREAS
+const exampleReviewsContainer = document.getElementById(
+  'example-reviews-container'
+);
+const exampleReviewLabel = document.getElementById('section-example');
+const newReviewsContainer = document.getElementById('new-reviews-container');
+const newReviewLabel = document.getElementById('section-new');
+
+exampleReviewLabel.addEventListener('click', () => {
+  exampleReviewLabel.classList.add('section-active');
+  newReviewLabel.classList.remove('section-active');
+  exampleReviewsContainer.classList.remove('hide');
+  newReviewsContainer.classList.add('hide');
+});
+
+newReviewLabel.addEventListener('click', () => {
+  exampleReviewLabel.classList.remove('section-active');
+  newReviewLabel.classList.add('section-active');
+  exampleReviewsContainer.classList.add('hide');
+  newReviewsContainer.classList.remove('hide');
+});
