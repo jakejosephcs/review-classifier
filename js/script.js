@@ -1,11 +1,10 @@
-// API Call to the OpenAI API
+// API Call to the OpenAI API (NOTE: removed API key)
 async function postData() {
   const response = await fetch('https://api.openai.com/v1/classifications', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization:
-        'Bearer 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',
+      Authorization: 'Bearer REDACTED',
     },
     body: JSON.stringify(params),
   });
@@ -21,6 +20,12 @@ const params = {
   examples: examples,
   model: 'curie',
 };
+
+
+
+// ---------------------------------------------------------------------------- //
+
+
 
 // CODE PROVIDE EXAMPLE REVIEWS
 const addExampleReviewBtn = document.getElementById('add-example-review');
@@ -82,6 +87,12 @@ function delBtn(id) {
   renderExampleReviews();
 }
 
+
+
+// ---------------------------------------------------------------------------- //
+
+
+
 // CODE CLASSIFIED REVIEWS
 let classifyReviewBtn = document.getElementById('classify-review-btn');
 let reviewToClassify = document.getElementById('review-to-classify');
@@ -95,7 +106,7 @@ classifyReviewBtn.addEventListener('click', () => {
   });
 });
 
-// Adds the review and its fetched label to the screen
+//  Adds the review and its label to the examples array
 function addClassifiedReviews(review, label) {
   classifiedReviewsDiv.innerHTML += `
     <div class="review">
@@ -105,6 +116,12 @@ function addClassifiedReviews(review, label) {
   `;
   reviewToClassify.value = '';
 }
+
+
+
+// ---------------------------------------------------------------------------- //
+
+
 
 // SWITCH TEXTAREAS
 const exampleReviewsContainer = document.getElementById(
