@@ -2,7 +2,7 @@
 
 Classify any review as either good, neutral or poor based only on a few example reviews
 
-[🔗 Read more!](https://www.notion.so/OpenAI-API-Project-Plan-96a0a7ea2bb545f4b0d2caa64a856e46)
+[🔗 Read more!](https://www.notion.so/Review-Classifier-96a0a7ea2bb545f4b0d2caa64a856e46)
 
 ## Screenshots
 #### Providing example reviews
